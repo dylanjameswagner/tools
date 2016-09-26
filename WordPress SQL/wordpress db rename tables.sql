@@ -1,7 +1,3 @@
--- js9m4l_ - lewisginter.com
--- kBQqDvz_ - theconcordiagroup.com
--- bf4l7a_ - richmont.org
-
 -- live to local
 update wp_postmeta set meta_value = replace(meta_value, '//www.example.com', '//example.com.local:8888');
 update wp_options set option_value = replace(option_value, '//www.example.com', '//example.com.local:8888');
