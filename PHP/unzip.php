@@ -4,7 +4,6 @@
  *
  * @usage /unzip.php?source=uploads/2016.zip
  */
-
 $source = isset( $_GET['source'] ) ? $_GET['source'] : 'archive.zip';
 $destination = pathinfo( realpath( $source ), PATHINFO_DIRNAME ); // get the absolute path to $source
 
@@ -22,5 +21,4 @@ function unzip( $source, $destination ) {
 		echo '<em>' . $source . '</em> could not be extracted.';
 	}
 }
-
 unzip( $source, $destination );
