@@ -1,7 +1,15 @@
+# Git
+
+```
+git remote rename origin github
+git remote rename origin pantheon
+git remote rename origin acquia
+```
+
+## ???
 ```
 git diff > ~/Desktop/lyttleco.diff
 ```
-
 
 ## remove unwanted files from repo history
 ## @link https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from-git-githubs-history
