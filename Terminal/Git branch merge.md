@@ -1,3 +1,4 @@
+```
 git checkout <branch>
 git rebase master
 git status
@@ -10,3 +11,4 @@ TEST
 git checkout master
 git merge <branch>
 git push origin master
+```

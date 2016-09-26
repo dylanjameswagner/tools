@@ -4,7 +4,6 @@
  *
  * @usage /zip.php?source=uploads/2016&destination=uploads/2016.zip
  */
-
 $source      = isset( $_GET['source'] )      ? $_GET['source']      : pathinfo( realpath( $file ), PATHINFO_DIRNAME ); // get the absolute path to $file
 $destination = isset( $_GET['destination'] ) ? $_GET['destination'] : 'archive.zip';
 
@@ -66,6 +65,5 @@ function zip( $source, $destination ) {
 	}
 
 	return $zip->close();
-};
-
+}
 zip( $source, $destination ); // zip( '/folder/to/compress/', './compressed.zip' );
