@@ -1,0 +1,15 @@
+#!/bin/sh
+# https://support.rackspace.com/how-to/use-cron-to-extract-and-compress-zip-unzip-on-cloud-sites/
+
+compress.sh
+#!/bin/sh
+zip -9pr /DESTINATION/DIRECTORY/file.zip /SOURCE/DIRECTORY/
+
+tar -cvzf /DESTINATION/DIRECTORY/file.tar.gz /SOURCE/DIRECTORY/
+
+zip -9pr /wp/wp-content/uploads/2015.zip /wp/wp-content/uploads/2015/
+
+
+decompress.sh
+#!/bin/sh
+unzip -o /SOURCE/DIRECTORY/file.zip -d /DESTINATION/DIRECTORY/

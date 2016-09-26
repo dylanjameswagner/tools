@@ -1,2 +1,2 @@
-# tools
-a random assortment of scripts and info pages
+# Tools
+A random assortment of scripts and info pages.

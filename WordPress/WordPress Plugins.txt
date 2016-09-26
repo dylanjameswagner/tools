@@ -1,0 +1,39 @@
+Thanks to everyone for coming out. I collected some links of things that were discussed. I know I missed some so I'm cross posting this to the discussion board if anybody wants to continue the discussion or add missing links.
+
+
+Next month's meetup will be on Tues May 21. I should have this scheduled before next week.
+
+
+Also a reminder about the WordPress 10th birthday party will be on 5/27. I'll be hosting a BBQ at my house for any WordPress users that want to celebrate. More details for that can be found here: http://www.meetup.com...­
+
+
+Lastly, here's the links I mentioned I had from this weeks' meetup:
+
+
+How to change Admin user - http://wpdaily.co/goodbye-admin-user/­
+
+WP Backup DB Pro (20% off code: twitlaunch) - http://deliciousbrains.com/wp-migrate-db-pro/­
+
+Search and Replace DB 2 - http://interconnectit.com/products/search-and-replace-for-wordpress-databases/­
+
+WP Alchemy (custom metaboxes) - http://www.farinspace.com/wpalchemy-metabox/­
+
+Custom metaboxes and fields for WordPress - https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress­
+
+PikList - http://piklist.com/­
+
+WordPress Skeleton - https://github.com/markjaquith/WordPress-Skeleton­
+
+WP Stack - https://github.com/markjaquith/WP-Stack/­
+
+WordSesh - http://wordsesh.org­
+
+WordPress.tv - http://wordpress.tv/­
+
+Forgot Sequel Pro http://www.sequelpro.com/­
+
+and MySQL Workbench - http://www.mysql.com/products/workbench/­
+
+Backup Buddy - For backups AND moving sites. Paid and worth every penny. $75 for 2 sites, $100 for 10, $150 for unlimited (1 year) http://ithemes.com/pu...­
+
+Broken Link Checker -- I help manage a large site with 100s (thousands?) of links and broken link checker is the best thing ever for that. It's free but I liked it so much I donated to the developer. As noted, it can cause some load issues on your site so it may be something to only try during an initial launch situation where many links are old and outdated. At any rate, I've found it handy. 
