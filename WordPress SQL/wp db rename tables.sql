@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- js9m4l_ - lewisginter.com
 -- kBQqDvz_ - theconcordiagroup.com
 -- bf4l7a_ - richmont.org
 
+=======
+>>>>>>> 04dfc0c4acd8e24a908d1cdb7aeb02cc3e12e03c
 =======
 >>>>>>> 04dfc0c4acd8e24a908d1cdb7aeb02cc3e12e03c
 -- live to local
