@@ -1,0 +1,13 @@
+Primary:usr:bin:???
+
+FileMerge:
+usr:bin:opendiff
+
+TextWrangler
+usr:bin:twdiff
+
+BBEdit:
+usr:bin:bbdiff
+
+Kaleidoscope
+ksdiff
