@@ -36,8 +36,8 @@ RENAME table `abc123_rg_lead_notes` TO `wp_rg_lead_notes`;
 RENAME table `abc123_ewwwio_images` TO `wp_ewwwio_images`;
 
 -- search db for broken meta_key
-SELECT * FROM `abc123_options` WHERE `option_name` LIKE '%abc123_%'
-SELECT * FROM `abc123_usermeta` WHERE `meta_key` LIKE '%abc123_%'
+SELECT * FROM `wp_options` WHERE `option_name` LIKE '%abc123_%'
+SELECT * FROM `wp_usermeta` WHERE `meta_key` LIKE '%abc123_%'
 
 -- update meta_key
 UPDATE `database_name`.`wp_usermeta` SET `meta_key` = 'wp_capabilities' WHERE `wp_usermeta`.`umeta_id` = 10;
