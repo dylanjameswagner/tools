@@ -33,32 +33,25 @@ git diff > ~/Desktop/lyttleco.diff
 
 
 ## remove unwanted files from repo history
-## @link https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from-git-githubs-history
-```
-git filter-branch --tree-filter 'rm -rf path/to/dir' --prune-empty HEAD
-echo path/to/dir >> .gitignore
-git add .gitignore
-git commit -m 'Remove path/to/dir from git history'
-git gc
-git push origin master --force
-```
+https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from-git-githubs-history
+	git filter-branch --tree-filter 'rm -rf path/to/dir' --prune-empty HEAD
+	echo path/to/dir >> .gitignore
+	git add .gitignore
+	git commit -m 'Remove path/to/dir from git history'
+	git gc
+	git push origin master --force
 
 ## delete remote branch d
-```
-git push origin --delete <branchName>
-```
+	git push origin --delete <branchName>
 
 ## push to multiple remotes
-# https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes
-```
-git remote add all git@github.com:username/primary.git
-git remote set-url all --add --push git@github.com:username/primary.git
-git remote set-url all --add --push git@github.com:username/secondary.git
-git push all master
-```
-```
-git config -e
-```
+https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes
+	git remote add all git@github.com:username/primary.git
+	git remote set-url all --add --push git@github.com:username/primary.git
+	git remote set-url all --add --push git@github.com:username/secondary.git
+	git push all master
+
+	git config -e
 
 ## rebase branch (didnt work, might be superfluous)
 # https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request
