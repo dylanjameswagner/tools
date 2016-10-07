@@ -86,6 +86,6 @@ https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request
 	git pull origin
 	git push origin
 
-	<!--break-->
+<!--break-->
 
 	.gitignore
