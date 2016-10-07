@@ -7,19 +7,19 @@
 	git remote rename origin acquia
 
 ## Environment Branches
-### Push to Remote-Environment Master
+###### Push to Remote-Environment Master
 
 	git push remote-dev master
 	git push remote-test master
 	git push remote-live master
 
-### Pull Remote Environment Master to Local Environment Branch
+###### Pull Remote Environment Master to Local Environment Branch
 
 	git pull remote-live master:branch-live
 	git pull remote-test master:branch-test
 	git pull remote-dev master:branch-dev
 
-## Push Local Environment Branch to Remote Environment Master (Fast-forward)
+###### Push Local Environment Branch to Remote Environment Master (Fast-forward)
 
 	git push remote-dev branch-dev:master
 	git push remote-test branch-test:master
