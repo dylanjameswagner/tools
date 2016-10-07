@@ -11,6 +11,27 @@ git remote rename origin acquia
 git diff > ~/Desktop/lyttleco.diff
 ```
 
+## Environment Branches
+
+### Push to Remote-Environment Master
+
+	git push remote-dev master
+	git push remote-test master
+	git push remote-live master
+
+### Pull Remote Environment Master to Local Environment Branch
+
+	git pull remote-live master:branch-live
+	git pull remote-test master:branch-test
+	git pull remote-dev master:branch-dev
+
+## Push Local Environment Branch to Remote Environment Master (Fast-forward)
+
+	git push remote-dev branch-dev:master
+	git push remote-test branch-test:master
+	git push remote-live branch-live:master
+
+
 ## remove unwanted files from repo history
 ## @link https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from-git-githubs-history
 ```
