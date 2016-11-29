@@ -1,31 +1,30 @@
-```
-sudo nano /etc/apache2/httpd.conf
-sudo nano /etc/apache2/extra/httpd-userdir.conf
-sudo nano /etc/apache2/users/djw.conf
-```
-```
-sudo nano /etc/hosts
-```
-```
-# VHX START
-127.0.0.1 example.localhost
-fe80::1%lo0 example.localhost
-# VHX STOP
-```
-```
-sudo nano /etc/apache2/extra/httpd-vhosts.conf
-```
-```
-NameVirtualHost *:80
+# Edit Hosts
 
-<Directory "/Users/djw/Sites/example.com/">
-Allow From All
-AllowOverride All
-Options +Indexes
-</Directory>
-<VirtualHost *:80>
-        ServerName "example.localhost"
-        ServerAlias "example.localhost.*.*.*.*.xip.io"
-        DocumentRoot "/Users/dylan/Sites/example.com"
-</VirtualHost>
-```
+        sudo nano /etc/apache2/httpd.conf
+        sudo nano /etc/apache2/extra/httpd-userdir.conf
+        sudo nano /etc/apache2/users/dylan.conf
+        sudo nano /etc/hosts
+
+# VHX START
+
+        127.0.0.1 example.com.local
+        fe80::1%lo0 example.com.local
+
+# VHX STOP
+
+        sudo nano /etc/apache2/extra/httpd-vhosts.conf
+
+# Virtual Host
+
+        NameVirtualHost *:80
+
+        <Directory "/Users/dylan/Sites/example.com/">
+        Allow From All
+        AllowOverride All
+        Options +Indexes
+        </Directory>
+        <VirtualHost *:80>
+                ServerName "example.com.local"
+                ServerAlias "example.com.local.*.*.*.*.xip.io"
+                DocumentRoot "/Users/dylan/Sites/example.com"
+        </VirtualHost>
