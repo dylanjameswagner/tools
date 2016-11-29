@@ -1,18 +1,21 @@
---------------------------------------------------------------------------------
-- Allow filter history search via up/down arrow:
+# Filter History - Search with Up/Down Arrow
+_in ~/.bash_profile_
 
-sudo nano ~/.bash_profile
+    bind '"\e[A":history-search-backward'
+    bind '"\e[B":history-search-forward'
 
-bind '"\e[A":history-search-backward'
-bind '"\e[B":history-search-forward'
+# Alias for Editing Common Files
 
-alias editbash='sudo nano ~/.bash_profile'
+    alias editbash='sudo nano ~/.bash_profile'
 
-alias edithosts='sudo nano /etc/hosts'
-alias editvhosts='sudo nano /etc/apache2/extra/httpd-vhosts.conf'
+    alias edithosts='sudo nano /etc/hosts'
+    alias editvhosts='sudo nano /etc/apache2/extra/httpd-vhosts.conf'
 
-alias showfiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder /System/Library/CoreServices/Finder.app'
-alias hidefiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder /System/Library/CoreServices/Finder.app'
+# Alias for Show/Hide Hidden Files
+
+    alias showfiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder /System/Library/CoreServices/Finder.app'
+
+    alias hidefiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder /System/Library/CoreServices/Finder.app'
 
 --------------------------------------------------------------------------------
 - enable text selection in Quick Look
