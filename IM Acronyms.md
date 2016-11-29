@@ -1,4 +1,4 @@
-Initialism | 
+Initialism | Meaning
 ---------- | ---
 afaik      | as far as I know
 afaict     | as far as I can tell
