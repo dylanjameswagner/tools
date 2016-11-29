@@ -4,6 +4,12 @@ _in ~/.bash_profile_
     bind '"\e[A":history-search-backward'
     bind '"\e[B":history-search-forward'
 
+# ??? Move Cursor A Word At A Time
+_in ~/.bash_profile_
+
+    bind '"\e\e[C": forward-word'
+    bind '"\e\e[D": backward-word'
+
 # Alias for Editing Common Files
 
     alias editbash='sudo nano ~/.bash_profile'
@@ -15,37 +21,34 @@ _in ~/.bash_profile_
 
     alias showfiles='defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder /System/Library/CoreServices/Finder.app'
 
+<!--break-->
+
     alias hidefiles='defaults write com.apple.finder AppleShowAllFiles FALSE; killall Finder /System/Library/CoreServices/Finder.app'
 
---------------------------------------------------------------------------------
-- enable text selection in Quick Look
-defaults write com.apple.finder QLEnableTextSelection -bool true
+# Enable text selection in Quick Look
 
---------------------------------------------------------------------------------
-- enable text replacement globally
-defaults write -g WebAutomaticTextReplacementEnabled -bool true
+    defaults write com.apple.finder QLEnableTextSelection -bool true
 
---------------------------------------------------------------------------------
-- show/hide hidden files
-defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder /System/Library/CoreServices/Finder.app
+# Enable text replacement globally
 
---------------------------------------------------------------------------------
-- disable warning when changing a file extension
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+    defaults write -g WebAutomaticTextReplacementEnabled -bool true
 
---------------------------------------------------------------------------------
-- enable/disable window shadows in screenshots
-- or use OPTION when clicking
-defaults write com.apple.screencapture disable-shadow -bool true; killall SystemUIServer
+# Show/Hide Hidden Files
 
-- ? idk
-.inputrc - home dir
+    defaults write com.apple.finder AppleShowAllFiles TRUE; killall Finder /System/Library/CoreServices/Finder.app
 
-- ? Bash commands?
-"\e\e[C": forward-word
-"\e\e[D": backward-word
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+# Disable warning when changing a file extension
+
+    defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Enable/disable window shadows in screenshots
+_or use OPTION when clicking_
+
+    defaults write com.apple.screencapture disable-shadow -bool true; killall SystemUIServer
+
+# ???
+
+    .inputrc - home dir
 
 By default, the Terminal has these shortcuts to move (left and right) word-by-word:
 !this may be default now… seems to work
