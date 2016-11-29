@@ -7,8 +7,8 @@
 
 # VHX START
 
-        127.0.0.1 libbiemill.localhost
-        fe80::1%lo0 libbiemill.localhost
+        127.0.0.1 example.com.local
+        fe80::1%lo0 example.com.local
 
 # VHX STOP
 
