@@ -1,4 +1,4 @@
-## WooCommerce
+## WooCommerce (woocommerce)
 __from theme__
 
     ln -s ../../plugins/woocommerce/templates woocommerce-reference
