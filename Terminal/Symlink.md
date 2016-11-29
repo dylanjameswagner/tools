@@ -1,9 +1,9 @@
-## woocommerce
+## WooCommerce
 __from theme__
 
     ln -s ../../plugins/woocommerce/templates woocommerce-reference
 
-## tribe events
+## The Events Calendar (tribe-events)
 __from theme__
 
     ln -s ../../plugins/the-events-calendar/src/views tribe-events-reference
@@ -15,12 +15,12 @@ __from theme__
 <!--cd tribe-events-reference-->
 <!--ln -s ../../../events-calendar-pro/src/views/pro pro-->
 
-## query monitor
+## Query Monitor
 __from wp-content__
 
     ln -s ./plugins/query-monitor/wp-content/db.php db.php
 
-## symlink uploads to uploads
+## Uploads to Uploads
 __from wp-content__
 
     ln -s ../../../example.com/wp-content/uploads uploads
