@@ -10,6 +10,8 @@
 
     ln -s ../../plugins/the-events-calendar/src/views tribe-events-reference
 
+<!--break-->
+
     ln -s ../../plugins/events-calendar-pro/src/views tribe-events-pro-reference
     
 <!--cd tribe-events-reference-->
