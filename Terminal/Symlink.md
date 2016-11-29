@@ -16,4 +16,4 @@
 `ln -s ./plugins/query-monitor/wp-content/db.php db.php`
 
 ## symlink uploads to uploads
-`ln -s ../../../lewisginter.org/wp-content/uploads uploads`
+`ln -s ../../../example.com/wp-content/uploads uploads`
