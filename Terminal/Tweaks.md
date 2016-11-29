@@ -4,12 +4,6 @@ _in ~/.bash_profile_
     bind '"\e[A":history-search-backward'
     bind '"\e[B":history-search-forward'
 
-# ??? Move Cursor A Word At A Time
-_in ~/.bash_profile_
-
-    bind '"\e\e[C": forward-word'
-    bind '"\e\e[D": backward-word'
-
 # Alias for Editing Common Files
 
     alias editbash='sudo nano ~/.bash_profile'
@@ -50,8 +44,15 @@ _or use OPTION when clicking_
 
     .inputrc - home dir
 
+# ??? Move Cursor A Word At A Time
+_in ~/.bash_profile_
+
+(!) This may be default now… it seems to work without binding.
+
+    bind '"\e\e[C": forward-word'
+    bind '"\e\e[D": backward-word'
+
 By default, the Terminal has these shortcuts to move (left and right) word-by-word:
-!this may be default now… seems to work
 Esc + b (left)
 Esc + f (right)
 You can configure Alt + left and right to generate those sequences for you:
