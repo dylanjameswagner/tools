@@ -84,13 +84,14 @@ https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request
 	git commit --amend -m ''
 	git branch
 	git branch -d
+	git branch -m <oldname> <newname>
 	git checkout
 	git checkout -b
 	git reset
 	git reset --hard
 	git remote -v
 	git remote add
-	git remote rename
+	git remote rename <oldname> <newname>
 	git pull origin
 	git push origin
 	git merge
