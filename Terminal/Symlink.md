@@ -11,7 +11,8 @@ _from theme_
 <!--break-->
 
     ln -s ../../plugins/events-calendar-pro/src/views tribe-events-pro-reference
-    
+
+<!--nested-->
 <!--cd tribe-events-reference-->
 <!--ln -s ../../../events-calendar-pro/src/views/pro pro-->
 
