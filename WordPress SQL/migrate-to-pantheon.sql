@@ -16,10 +16,10 @@ update wp_posts set post_content = replace(post_content, '//dev.example.com.php5
 update wp_posts set guid = replace(guid, '//dev.example.com.php53-24.ord1-1.websitetestlink.com', '//dev-example.pantheonsite.io');
 
 -- subdir live to root dev - remove wp
-update wp_postmeta set meta_value = replace(meta_value, '//dev-example.pantheonsite.io/wp', '//dev-example.pantheonsite.io');
-update wp_options set option_value = replace(option_value, '//dev-example.pantheonsite.io/wp', '//dev-example.pantheonsite.io');
-update wp_posts set post_content = replace(post_content, '//dev-example.pantheonsite.io/wp', '//dev-example.pantheonsite.io');
-update wp_posts set guid = replace(guid, '//dev-example.pantheonsite.io/wp', '//dev-example.pantheonsite.io');
+update wp_postmeta set meta_value = replace(meta_value, '//dev-example.pantheonsite.io/wp/', '//dev-example.pantheonsite.io/');
+update wp_options set option_value = replace(option_value, '//dev-example.pantheonsite.io/wp/', '//dev-example.pantheonsite.io/');
+update wp_posts set post_content = replace(post_content, '//dev-example.pantheonsite.io/wp/', '//dev-example.pantheonsite.io/');
+update wp_posts set guid = replace(guid, '//dev-example.pantheonsite.io/wp/', '//dev-example.pantheonsite.io/');
 
 -- local to dev
 update wp_postmeta set meta_value = replace(meta_value, '//example.com.local:8888', '//dev-example.pantheonsite.io');
