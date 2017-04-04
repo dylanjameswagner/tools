@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "Protected Content"
-AuthUserFile /path/to/file/htdocs/.htpasswd
-Require user username
