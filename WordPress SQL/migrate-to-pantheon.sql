@@ -73,24 +73,15 @@ SELECT * FROM `wp_usermeta` WHERE `meta_key` LIKE '%abc123_%'
 -- update meta_key created from previous SELECT results
 UPDATE `pantheon`.`wp_usermeta` SET `meta_key` = 'wp_capabilities' WHERE `wp_usermeta`.`umeta_id` = 10;
 
+-- update broken meta keys
 update wp_options set option_name = replace(option_name, 'abc123_user_roles', 'wp_user_roles');
 
+-- update broken meta keys
 update wp_usermeta set meta_key = replace(meta_key, 'abc123_capabilities', 'wp_capabilities');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user_level', 'wp_user_level');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_dashboard_quick_press_last_post_id', 'wp_dashboard_quick_press_last_post_id');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user', 'wp_user');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user', 'wp_user');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_capabilities', 'wp_capabilities');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user_level', 'wp_user_level');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_capabilities', 'wp_capabilities');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user_level', 'wp_user_level');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_capabilities', 'wp_capabilities');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user_level', 'wp_user_level');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_capabilities', 'wp_capabilities');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user_level', 'wp_user_level');
 update wp_usermeta set meta_key = replace(meta_key, 'abc123_dashboard_quick_press_last_post_id', 'wp_dashboard_quick_press_last_post_id');
 update wp_usermeta set meta_key = replace(meta_key, 'abc123_media_library_mode', 'wp_media_library_mode');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_dashboard_quick_press_last_post_id', 'wp_dashboard_quick_press_last_post_id');
 update wp_usermeta set meta_key = replace(meta_key, 'abc123_user', 'wp_user');
-update wp_usermeta set meta_key = replace(meta_key, 'abc123_user', 'wp_user');
+update wp_usermeta set meta_key = replace(meta_key, 'abc123_user_level', 'wp_user_level');
+update wp_usermeta set meta_key = replace(meta_key, 'abc123_user-settings', 'wp_user-settings');
+update wp_usermeta set meta_key = replace(meta_key, 'abc123_user-settings-time', 'wp_user-settings-time');
 update wp_usermeta set meta_key = replace(meta_key, 'abc123_yoast_notification', 'wp_yoast_notification');
