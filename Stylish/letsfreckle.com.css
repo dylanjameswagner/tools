@@ -1,0 +1,10 @@
+.projects.autocomplete {
+	width: auto !important;
+	max-width: calc(100% - 196px - 95px);
+}
+
+@media (min-width: 1001px) {
+	.projects.autocomplete {
+		max-width: calc(100% - 346px - 95px);
+	}
+}
