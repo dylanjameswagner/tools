@@ -59,5 +59,6 @@ You can configure Alt + left and right to generate those sequences for you:
 
 Open Terminal preferences (command + ,);
 At Settings tab, select Keyboard and double-click ⌥ ← if it's there, or add it if it's not.
+
 Set the modifier as desired, and type the shortcut key in the box: Esc+b, generating the text \033b (you can't type this text manually).
 Repeat for word-right (esc+f becomes \033f)
