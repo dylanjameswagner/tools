@@ -26,3 +26,8 @@ _from wp-content_
 _from subdirectory_
 
     ln -s ../.bash_profile .bash_profile
+
+# KSS to theme
+_from siteroot_
+
+    ln -s /wp-content/themes/sandsanderson/kss kss
