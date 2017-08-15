@@ -12,6 +12,9 @@ _from theme_
 
     ln -s ../../plugins/events-calendar-pro/src/views/pro tribe-events-pro-reference
 
+    cd tribe-events
+    ln -s ../../../plugins/events-calendar-pro/src/views/pro pro-reference
+
 # Query Monitor
 _from wp-content_
 
