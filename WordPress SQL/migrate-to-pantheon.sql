@@ -44,10 +44,10 @@ update wp_posts set post_content = replace(post_content, '//dev.example.com.php5
 update wp_posts set guid = replace(guid, '//dev.example.com.php56-24.ord1-1.websitetestlink.com', '//dev-example.pantheonsite.io');
 
 -- local to dev
-update wp_postmeta set meta_value = replace(meta_value, '//example.com.local:8888', '//dev-example.pantheonsite.io');
-update wp_options set option_value = replace(option_value, '//example.com.local:8888', '//dev-example.pantheonsite.io');
-update wp_posts set post_content = replace(post_content, '//example.com.local:8888', '//dev-example.pantheonsite.io');
-update wp_posts set guid = replace(guid, '//example.com.local:8888', '//dev-example.pantheonsite.io');
+update wp_postmeta set meta_value = replace(meta_value, '//example.colab', '//dev-example.pantheonsite.io');
+update wp_options set option_value = replace(option_value, '//example.colab', '//dev-example.pantheonsite.io');
+update wp_posts set post_content = replace(post_content, '//example.colab', '//dev-example.pantheonsite.io');
+update wp_posts set guid = replace(guid, '//example.colab', '//dev-example.pantheonsite.io');
 
 -- subdir dev to root dev - remove wp
 update wp_postmeta set meta_value = replace(meta_value, '//dev-example.pantheonsite.io/wp/', '//dev-example.pantheonsite.io/');
@@ -56,10 +56,10 @@ update wp_posts set post_content = replace(post_content, '//dev-example.pantheon
 update wp_posts set guid = replace(guid, '//dev-example.pantheonsite.io/wp/', '//dev-example.pantheonsite.io/');
 
 -- live to local
-update wp_postmeta set meta_value = replace(meta_value, '//www.example.com', '//example.com.local:8888');
-update wp_options set option_value = replace(option_value, '//www.example.com', '//example.com.local:8888');
-update wp_posts set post_content = replace(post_content, '//www.example.com', '//example.com.local:8888');
-update wp_posts set guid = replace(guid, '//www.example.com', '//example.com.local:8888');
+update wp_postmeta set meta_value = replace(meta_value, '//www.example.com', '//example.colab');
+update wp_options set option_value = replace(option_value, '//www.example.com', '//example.colab');
+update wp_posts set post_content = replace(post_content, '//www.example.com', '//example.colab');
+update wp_posts set guid = replace(guid, '//www.example.com', '//example.colab');
 
 -- test for anything missed
 SELECT * FROM `wp_postmeta` WHERE `meta_value` LIKE '%example.com%'

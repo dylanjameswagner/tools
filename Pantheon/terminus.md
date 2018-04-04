@@ -3,7 +3,7 @@
 - https://pantheon.io/docs/terminus/commands/
 - https://github.com/pantheon-systems/terminus
 
-brew update homebrew/php/terminus
+	brew update homebrew/php/terminus
 
 ## Create Site
 
@@ -11,4 +11,6 @@ brew update homebrew/php/terminus
 
 <!--break-->
 
-	terminus site:create --org co-lab nationwideelectric "Nationwide Electric Supply" wordpress
+	terminus site:create --org colab nationwideelectric "Nationwide Electric Supply" wordpress
+	terminus site:create --org colab vaccineinjurylegalteam "Vaccine Injury Legal Team" wordpress
+	terminus site:create --org colab mlwgs "Maggie L. Walker Governor's School" wordpress

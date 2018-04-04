@@ -6,11 +6,17 @@ _from theme_
 # The Events Calendar (tribe-events)
 _from theme_
 
+    ln -s ../../plugins/the-events-calendar/src/views tribe-events-reference && ln -s ../../plugins/events-calendar-pro/src/views/pro tribe-events-pro-reference
+
+<!--break-->
+
     ln -s ../../plugins/the-events-calendar/src/views tribe-events-reference
 
 <!--break-->
 
     ln -s ../../plugins/events-calendar-pro/src/views/pro tribe-events-pro-reference
+
+<!--break-->
 
     cd tribe-events
     ln -s ../../../plugins/events-calendar-pro/src/views/pro pro-reference
