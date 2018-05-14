@@ -30,6 +30,8 @@ if git rev-parse --git-dir > /dev/null 2>&1; then :
 	curl --user "$USER:$PASS" --include --request DELETE "https://api.github.com/repos/$OWNER/$REPO/labels/wontfix"
 
 	# Create labels
+	curl --user "$USER:$PASS" --include --request POST --data '{"name":"Accessibility","color":"185194"}' "https://api.github.com/repos/$OWNER/$REPO/labels"
+	curl --user "$USER:$PASS" --include --request POST --data '{"name":"Usability","color":"bfd4f2"}' "https://api.github.com/repos/$OWNER/$REPO/labels"
 	curl --user "$USER:$PASS" --include --request POST --data '{"name":"Can’t Replicate","color":"f49600"}' "https://api.github.com/repos/$OWNER/$REPO/labels"
 	curl --user "$USER:$PASS" --include --request POST --data '{"name":"Out of Scope","color":"f4ac00"}' "https://api.github.com/repos/$OWNER/$REPO/labels"
 	curl --user "$USER:$PASS" --include --request POST --data '{"name":"Low Priority","color":"f4eab2"}' "https://api.github.com/repos/$OWNER/$REPO/labels"
