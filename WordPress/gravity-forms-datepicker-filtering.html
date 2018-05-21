@@ -1,0 +1,84 @@
+<script>
+/**
+ * Purchase Tickets Date Datepicker Filtering
+ *
+ * Include in form as HTML CONTENT field. Update Form ID and Field ID
+ *
+ * /wp-admin/admin.php?page=gf_edit_forms&id=3
+ *
+ * @var int   formId
+ * @var int   formFieldId
+ * @var int   formFieldMaxDateYear
+ * @var int   formFieldMaxDateMonth
+ * @var array formFieldBlackoutDates
+ */
+var formId                 = 3;
+var formFieldId            = 1;
+var formFieldMaxDateYear   = 2017;
+var formFieldMaxDateMonth  = 12;
+var formFieldBlackoutDates = [
+    ['2017-01-01', '2017-01-20'],
+    ['2017-01-23', '2017-01-27'],
+    ['2017-01-30', '2017-02-03'],
+    ['2017-02-06', '2017-02-10'],
+    ['2017-02-13', '2017-02-17'],
+    ['2017-02-20', '2017-02-24'],
+    ['2017-02-27', '2017-03-03'],
+    ['2017-03-06', '2017-03-10'],
+    '2017-03-18',
+    '2017-04-16',
+    '2017-11-24',
+    ['2017-12-24', '2017-12-25'],
+    '2017-12-31',
+];
+
+// required for non jQuery dateFormatted
+// function datePad(n) {
+//     return n < 10 ? '0' + n : n;
+// }
+
+// single-level array date comparison
+// function parseBlackoutDates(date) {
+//     var dateFormatted = date.getFullYear() + '-' + datePad(date.getMonth() + 1) + '-' + datePad(date.getDate()); // non jQuery
+//     var dateFormatted = jQuery.datepicker.formatDate('yy-mm-dd', date);
+//
+//     return [formFieldBlackoutDates.indexOf(dateFormatted) == -1]; // true if not in blackout array
+// }
+
+// multi-level array date comparison
+function parseBlackoutDatesAndRanges(date) {
+    // var dateFormatted = date.getFullYear() + '-' + datePad(date.getMonth() + 1) + '-' + datePad(date.getDate()); // non jQuery
+    var dateFormatted = jQuery.datepicker.formatDate('yy-mm-dd', date);
+
+    for (var i = 0; i < formFieldBlackoutDates.length; i++) {
+
+        if (Array.isArray(formFieldBlackoutDates[i]) && formFieldBlackoutDates[i].length === 2) {
+            if (dateFormatted >= formFieldBlackoutDates[i][0]
+             && dateFormatted <= formFieldBlackoutDates[i][1]
+            ) {
+                return [false];
+            }
+        }
+        else {
+
+            if (dateFormatted === formFieldBlackoutDates[i]) {
+                return [false];
+            }
+        }
+    }
+
+    return [true];
+}
+
+gform.addFilter( 'gform_datepicker_options_pre_init', function( optionsObj, formId, fieldId ) {
+
+    if ( formId === formId.toString() && fieldId === formFieldId.toString() ) {
+        // optionsObj.dateFormat    = 'yy-mm-dd'; // override gravity forms setting
+        optionsObj.minDate       = '+1';
+        optionsObj.maxDate       = new Date(formFieldMaxDateYear, formFieldMaxDateMonth, 0);
+        // optionsObj.beforeShowDay = parseBlackoutDates; // single-level array date comparison
+        optionsObj.beforeShowDay = parseBlackoutDatesAndRanges; // multi-level array date comparison
+    }
+    return optionsObj;
+});
+</script>

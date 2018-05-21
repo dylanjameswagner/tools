@@ -6,15 +6,20 @@ _from theme_
 # The Events Calendar (tribe-events)
 _from theme_
 
+    ln -s ../../plugins/the-events-calendar/src/views tribe-events-reference && ln -s ../../plugins/events-calendar-pro/src/views/pro tribe-events-pro-reference
+
+<!--break-->
+
     ln -s ../../plugins/the-events-calendar/src/views tribe-events-reference
 
 <!--break-->
 
-    ln -s ../../plugins/events-calendar-pro/src/views tribe-events-pro-reference
+    ln -s ../../plugins/events-calendar-pro/src/views/pro tribe-events-pro-reference
 
-<!--nested-->
-<!--cd tribe-events-reference-->
-<!--ln -s ../../../events-calendar-pro/src/views/pro pro-->
+<!--break-->
+
+    cd tribe-events
+    ln -s ../../../plugins/events-calendar-pro/src/views/pro pro-reference
 
 # Query Monitor
 _from wp-content_
@@ -30,3 +35,8 @@ _from wp-content_
 _from subdirectory_
 
     ln -s ../.bash_profile .bash_profile
+
+# KSS to theme
+_from siteroot_
+
+    ln -s /wp-content/themes/sandsanderson/kss kss

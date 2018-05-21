@@ -1,0 +1,17 @@
+#!/bin/bash
+
+## Redirect Requests for Missing Uploads
+#
+# Place this .htaccess file in the WordPress wp-content/uploads directory.
+# Any request for a missing file will be redirected to the reference environment
+# listed in the active RewriteRule.
+#
+# Useful during post-launch development for any environment that does not have a
+# complete copy of wp-content/uploads.
+##
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*) http://www.example.com/wp-content/uploads/$1
+</IfModule>

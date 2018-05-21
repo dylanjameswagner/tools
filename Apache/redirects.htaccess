@@ -1,0 +1,26 @@
+#!/bin/bash
+
+## redirect acquia prod to custom domain
+RewriteCond %{HTTP_HOST} ^example\.prod\.acquia-sites\.com$ [NC] # acquia prod
+# RewriteRule ^ http://www\.example\.com%{REQUEST_URI} [L,R=301] # custom domain http
+RewriteRule ^ https://www\.example\.com%{REQUEST_URI} [L,R=301] # custom domain https
+
+## Redirect to non-www
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*) http://%1/$1 [R=301,L]
+
+## Redirect to non-www from Drupal
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
+
+## Redirect to www
+# RewriteCond %{HTTP_HOST} !prod\.acquia-sites\.com [NC] # exclude Acquia domains
+RewriteCond %{HTTP_HOST} ^example\.com$ [NC] # custom domain
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+## Redirect to https
+# RewriteCond %{HTTP_HOST} !prod\.acquia-sites\.com [NC] # exclude Acquia domains
+RewriteCond %{HTTP_HOST} ^www.example\.com$ [NC] # custom domain
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

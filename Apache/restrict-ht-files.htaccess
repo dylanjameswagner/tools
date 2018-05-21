@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# restrict access to .ht files
+<Files ~ "^\.ht">
+	order allow,deny
+	deny from all
+	satisfy all
+</Files>

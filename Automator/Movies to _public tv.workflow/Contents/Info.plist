@@ -8,7 +8,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>default</key>
-				<string>Move movies from subdir to this folder</string>
+				<string>Movies to _public_tv</string>
 			</dict>
 			<key>NSMessage</key>
 			<string>runWorkflowAsService</string>

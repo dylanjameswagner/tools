@@ -1,14 +1,13 @@
 <?php
 
-function carbon_admin_account() {
-	$user  = 'username';
-	$pass  = 'password';
-	$email = 'email@exaple.com';
+function carbon_create_admin_account() {
+	$username = 'username';
+	$password = 'password';
+	$email    = 'email@example.com';
 
-	if ( ! username_exists( $user ) && ! email_exists( $email ) ) {
-		$user_id = wp_create_user( $user, $pass, $email );
-		$user = new WP_User( $user_id );
+	if ( ! username_exists( $username ) && ! email_exists( $email ) ) {
+		$user = new WP_User( wp_create_user( $username, $password, $email ) );
 		$user->set_role( 'administrator' );
 	}
 }
-add_action( 'init', 'admin_account' );
+add_action( 'init', 'carbon_create_admin_account' );

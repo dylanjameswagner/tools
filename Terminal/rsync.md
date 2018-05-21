@@ -1,3 +1,7 @@
+# RSYNC dir to dir
+
+	<!-- sudo rsync -zrvn --delete /var/www/www.example.com/htdocs/wp/wp-content/uploads/2016/ /var/www/dev.example.com/htdocs/wp/wp-content/uploads/2016 -->
+
 ## RSYNC WWW to DEV
 
 	sudo rsync -zrvn /var/www/www.example.com/htdocs/wp/wp-content/uploads/2015/ /var/www/dev.example.com/htdocs/wp/wp-content/uploads/2015
