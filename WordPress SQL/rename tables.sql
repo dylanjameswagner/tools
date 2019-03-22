@@ -33,6 +33,11 @@ RENAME table `abc123_rg_lead_detail_long` TO `wp_rg_lead_detail_long`;
 RENAME table `abc123_rg_lead_meta` TO `wp_rg_lead_meta`;
 RENAME table `abc123_rg_lead_notes` TO `wp_rg_lead_notes`;
 
+RENAME table `abc123_redirection_404` TO `wp_redirection_404`;
+RENAME table `abc123_redirection_groups` TO `wp_redirection_groups`;
+RENAME table `abc123_redirection_items` TO `wp_redirection_items`;
+RENAME table `abc123_redirection_logs` TO `wp_redirection_logs`;
+
 RENAME table `abc123_ewwwio_images` TO `wp_ewwwio_images`;
 
 -- search db for broken meta_key
