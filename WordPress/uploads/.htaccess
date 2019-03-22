@@ -15,3 +15,21 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule (.*) http://www.example.com/wp-content/uploads/$1
 </IfModule>
+
+## https://winginx.com/en/htaccess
+# nginx configuration
+location / {
+  if (!-e $request_filename){
+    rewrite ^(.*)$ http://www.example.com/wp-content/uploads/$1 redirect;
+  }
+}
+
+## https://stackoverflow.com/questions/33677794/nginx-rewrite-image-location
+location ~ ^/images/(.*)$ {
+    try_files $uri $uri/ /wp-content/plugins/myplugin/uploads/$1;
+}
+# Edit:
+# Below the code that also handles the dynamic ID folder of the user:
+location ~ ^/images/(.*)/(.*)$ {
+    try_files $uri $uri/ /wp-content/plugins/veilgarant/uploads/$1/$2;
+}
