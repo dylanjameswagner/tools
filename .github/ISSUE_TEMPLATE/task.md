@@ -7,18 +7,18 @@ assignees: ''
 
 ---
 
-**URLs\***
+**URL(s)\***
 
-Description of Issue: *
+**Description of Issue\***
 
-Steps to Reproduce: *
+**Steps to Reproduce**
 
-Expected Outcome: *
+**Expected Outcome\***
 
-Internal Expectations: * (you want an estimate, you want solution, etc.) 
+**Internal Expectations\*** (you want an estimate, you want solution, etc.) 
 
-Browsers and Devices:
+**Browsers and Devices**
 
-Does the client need to review prior to correction: Y/N
+**Does the client need to review prior to correction** Y/N
 
-Attachments: Screenshots and/or emails from clients
+**Attachments** Screenshots and/or emails from clients
