@@ -1,16 +1,13 @@
 ---
 name: Task
 about: Describe this issue template's purpose here.
-title: ''
+title: "[CLIENT CODE] Page: Description - Estimate"
 labels: ''
 assignees: ''
 
 ---
 
-Task Name:*
-Eg. [CLIENT CODE] Page: Description - Estimate (if already estimated)
-
-URL: *
+**URLs\***
 
 Description of Issue: *
 
