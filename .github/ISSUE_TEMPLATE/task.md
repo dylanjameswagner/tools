@@ -9,7 +9,7 @@ assignees: 'dylanjameswagner'
 
 **URL(s)\***
 
-**Description of Issue\***
+**Description\***
 
 **Steps to Reproduce**
 
