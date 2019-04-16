@@ -1,6 +1,6 @@
 ---
 name: Task
-about: Describe this issue template's purpose here.
+about: Assign a task to a developer.
 title: "[CLIENT CODE] Page: Description - Estimate"
 labels: ''
 assignees: 'dylanjameswagner'
