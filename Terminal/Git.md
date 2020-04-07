@@ -36,6 +36,28 @@ https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from
 
 	git filter-branch --tree-filter 'rm -rf path/to/dir' --prune-empty HEAD
 
+https://stackoverflow.com/questions/10067848/remove-folder-and-its-contents-from-git-githubs-history/17824718#17824718
+
+If you are here to copy-paste code:
+
+This is an example which removes node_modules from history
+
+	git filter-branch --tree-filter "rm -rf node_modules" --prune-empty HEAD
+	git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+	echo node_modules/ >> .gitignore
+	git add .gitignore
+	git commit -m 'Removing node_modules from git history'
+	git gc
+	git push origin master --force
+
+What git actually does:
+
+The first line iterates through all references on the same tree (--tree-filter) as HEAD (your current branch), running the command rm -rf node_modules. This command deletes the node_modules folder (-r, without -r, rm won't delete folders), with no prompt given to the user (-f). The added --prune-empty deletes useless (not changing anything) commits recursively.
+
+The second line deletes the reference to that old branch.
+
+The rest of the commands are relatively straightforward.
+
 ### Add Directory to the .gitignore and Commit the Change
 
 	echo path/to/dir >> .gitignore
